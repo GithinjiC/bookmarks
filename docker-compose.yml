@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  web:
+    build:
+      context: .
+    command: python manage.py runserver 0.0.0.0:8200
+    volumes:
+      - .:/bookmarks
+    ports:
+      - "8200:8200"
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=bookmarks
+networks:
+  default:
+    external:
+      name: myshop_default

@@ -118,9 +118,6 @@ cert.key
 # Rope project settings
 .ropeproject
 
-# specific files
-/bookmarks/settings.py
-
 # mkdocs documentation
 /site
 
